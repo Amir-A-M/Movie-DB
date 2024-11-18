@@ -1,3 +1,4 @@
+import { Button, ButtonText } from "@/src/components/ui/button";
 import { Text, View } from "react-native";
 
 export default function Index() {
@@ -10,6 +11,11 @@ export default function Index() {
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
+      
+      <Button size="md" variant="solid" action="primary" >
+          <ButtonText>Hello World!</ButtonText>
+      </Button>
+      
     </View>
   );
 }
