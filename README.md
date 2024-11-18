@@ -36,7 +36,6 @@ Movie-DB/
 
 ---
 
-# CONTRIBUTING.md
 
 # راهنمای مشارکت در Movie DB 🎬
 
