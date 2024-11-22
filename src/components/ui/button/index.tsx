@@ -125,7 +125,7 @@ const buttonStyle = tva({
   variants: {
     action: {
       primary:
-        'bg-primary-500 data-[hover=true]:bg-primary-600 data-[active=true]:bg-primary-700 border-primary-300 data-[hover=true]:border-primary-400 data-[active=true]:border-primary-500 data-[focus-visible=true]:web:ring-indicator-info',
+        'bg-primary-600 data-[hover=true]:bg-primary-700 data-[active=true]:bg-primary-800 border-primary-300 data-[hover=true]:border-primary-400 data-[active=true]:border-primary-500 data-[focus-visible=true]:web:ring-indicator-info',
       secondary:
         'bg-secondary-500 border-secondary-300 data-[hover=true]:bg-secondary-600 data-[hover=true]:border-secondary-400 data-[active=true]:bg-secondary-700 data-[active=true]:border-secondary-500 data-[focus-visible=true]:web:ring-indicator-info',
       positive:
@@ -341,11 +341,11 @@ const buttonGroupStyle = tva({
   base: '',
   variants: {
     space: {
-      'xs': 'gap-1',
-      'sm': 'gap-2',
-      'md': 'gap-3',
-      'lg': 'gap-4',
-      'xl': 'gap-5',
+      xs: 'gap-1',
+      sm: 'gap-2',
+      md: 'gap-3',
+      lg: 'gap-4',
+      xl: 'gap-5',
       '2xl': 'gap-6',
       '3xl': 'gap-7',
       '4xl': 'gap-8',
