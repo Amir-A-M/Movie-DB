@@ -3,13 +3,14 @@ import { Text } from '@/src/components/ui/text';
 import { Image } from '../ui/image';
 import { Heading } from '../ui/heading';
 import { Input, InputField } from '../ui/input';
-import { Button } from '../ui/button';
+import { Button, ButtonText } from '../ui/button';
 const bgImage = require('../../images/breaking-bad-1182023.png');
 
 function Hero() {
   return (
     <Box className='h-[20rem] md:h-[26rem] bg-black bg-gradient-to-tr from-orange-950 to-yellow-800 d-flex justify-center px-6 sm:px-20 lg:px-40 relative m-2 sm:m-3 md:m-6 lg:m-9 rounded-lg overflow-hidden'>
       <Image
+        alt='Breaking Bad'
         source={bgImage}
         className='absolute inset-0 w-full h-full opacity-40'
       />
@@ -31,7 +32,7 @@ function Hero() {
             action='primary'
             className='rounded-none border-none'
           >
-            Search
+            <ButtonText>Search</ButtonText>
           </Button>
         </Input>
       </Box>

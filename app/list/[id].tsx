@@ -1,8 +1,9 @@
+import { Box } from '@/src/components/ui/box';
 import { Text } from '@/src/components/ui/text';
-import { useSearchParams } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
 
 export default function SingleMovieScreen() {
-  const { id } = useSearchParams();
+  const { id } = useLocalSearchParams();
 
   return (
     <Box className='flex-1 p-4 bg-gray-100'>
