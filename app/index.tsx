@@ -1,5 +1,6 @@
 import BasicCarousel from '@/src/components/carousel/basic/BasicCarousel';
 import BasicCarouselWrapper from '@/src/components/carousel/basic/BasicCarouselWrapper';
+import SingleCarouselWrapper from '@/src/components/carousel/single/SingleCarouselWrapper';
 import Hero from '@/src/components/home/hero';
 import { Box } from '@/src/components/ui/box';
 import { Href } from 'expo-router';
@@ -18,6 +19,8 @@ export default function Index() {
             href: './' as Href,
           }}
         />
+
+        <SingleCarouselWrapper title='Trailers' carouselItems={data} />
 
         <BasicCarouselWrapper
           title='Latest Releases'

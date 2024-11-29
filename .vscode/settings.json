@@ -17,5 +17,8 @@
   "prettier.arrowParens": "always", // Always include parentheses for arrow functions
   "prettier.bracketSpacing": true, // Include spaces between brackets in object literals
   "prettier.endOfLine": "lf",
-  "typescript.tsdk": "node_modules\\typescript\\lib" // Ensure consistent line endings (use LF for Linux/Mac/Windows consistency)
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "cSpell.words": [
+    "viewability"
+  ] // Ensure consistent line endings (use LF for Linux/Mac/Windows consistency)
 }
