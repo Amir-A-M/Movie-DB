@@ -4,6 +4,7 @@ import SingleCarouselWrapper from '@/src/components/carousel/single/SingleCarous
 import Header from '@/src/components/header/Header';
 import Hero from '@/src/components/pages/home/hero';
 import { Box } from '@/src/components/ui/box';
+import { exampleMovieList } from '@/src/constants/sampleData';
 import { Href } from 'expo-router';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -17,78 +18,31 @@ export default function Index() {
 
         <BasicCarouselWrapper
           title='Trending'
-          carouselItems={data}
+          carouselItems={exampleMovieList}
           cta={{
             href: './' as Href,
           }}
         />
 
-        <SingleCarouselWrapper title='Trailers' carouselItems={data} />
+        <SingleCarouselWrapper
+          title='Trailers'
+          carouselItems={exampleMovieList}
+        />
 
         <BasicCarouselWrapper
           title='Latest Releases'
-          carouselItems={data}
+          carouselItems={exampleMovieList}
           cta={{
             title: 'See all releases',
             href: './' as Href,
           }}
         />
 
-        <BasicCarouselWrapper title="What's Popular" carouselItems={data} />
+        <BasicCarouselWrapper
+          title="What's Popular"
+          carouselItems={exampleMovieList}
+        />
       </Box>
     </ScrollView>
   );
 }
-
-const data = [
-  {
-    url: '/list/1',
-    title: 'Hello',
-    image: require('@/assets/images/slide-images/purple-0.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Title for p1',
-    image: require('@/assets/images/slide-images/purple-1.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Po 2 text',
-    image: require('@/assets/images/slide-images/purple-2.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Title',
-    image: require('@/assets/images/slide-images/purple-3.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Title for p1',
-    image: require('@/assets/images/slide-images/purple-1.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Po 2 text',
-    image: require('@/assets/images/slide-images/purple-2.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Title',
-    image: require('@/assets/images/slide-images/purple-3.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Title for p1',
-    image: require('@/assets/images/slide-images/purple-1.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Po 2 text',
-    image: require('@/assets/images/slide-images/purple-2.png'),
-  },
-  {
-    url: '/list/1',
-    title: 'Title',
-    image: require('@/assets/images/slide-images/purple-3.png'),
-  },
-];
