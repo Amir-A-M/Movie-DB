@@ -1,8 +1,4 @@
-import {
-  ImageSourcePropType,
-  ViewabilityConfig,
-  ViewToken,
-} from 'react-native';
+import { ImageSourcePropType } from 'react-native';
 import { CarouselItem } from './Item';
 import { Box } from '../../ui/box';
 
@@ -11,7 +7,6 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from 'react-native-reanimated';
-import { useRef, useState } from 'react';
 import Pagination from './Pagination';
 
 export type SingleCarouselItemType = {
