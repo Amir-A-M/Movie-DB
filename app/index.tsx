@@ -1,22 +1,36 @@
 import BasicCarousel from '@/src/components/carousel/basic/BasicCarousel';
 import BasicCarouselWrapper from '@/src/components/carousel/basic/BasicCarouselWrapper';
 import Hero from '@/src/components/home/hero';
+import { Box } from '@/src/components/ui/box';
 import { Href } from 'expo-router';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Index() {
   return (
-    <View className='h-full w-screen'>
-      <Hero />
-      <BasicCarouselWrapper
-        title='Latest Releases'
-        carouselItems={data}
-        cta={{
-          title: 'See all releases',
-          href: './' as Href,
-        }}
-      />
-    </View>
+    <ScrollView>
+      <Box className='h-full w-screen'>
+        <Hero />
+
+        <BasicCarouselWrapper
+          title='Trending'
+          carouselItems={data}
+          cta={{
+            href: './' as Href,
+          }}
+        />
+
+        <BasicCarouselWrapper
+          title='Latest Releases'
+          carouselItems={data}
+          cta={{
+            title: 'See all releases',
+            href: './' as Href,
+          }}
+        />
+
+        <BasicCarouselWrapper title="What's Popular" carouselItems={data} />
+      </Box>
+    </ScrollView>
   );
 }
 
