@@ -11,6 +11,7 @@ export default function RootLayout() {
   return (
     <GluestackUIProvider mode={colorMode}>
       <StatusBar style='auto' />
+
       <Stack
         screenOptions={{
           headerShown: false,
