@@ -1,10 +1,10 @@
 import { Box } from '@/src/components/ui/box';
 import { Text } from '@/src/components/ui/text';
-import { Image } from '../ui/image';
-import { Heading } from '../ui/heading';
-import { Input, InputField } from '../ui/input';
-import { Button, ButtonText } from '../ui/button';
-const bgImage = require('../../images/breaking-bad-1182023.png');
+import { Image } from '../../ui/image';
+import { Heading } from '../../ui/heading';
+import { Input, InputField } from '../../ui/input';
+import { Button, ButtonText } from '../../ui/button';
+const bgImage = require('@/src/images/breaking-bad-1182023.png');
 
 function Hero() {
   return (
