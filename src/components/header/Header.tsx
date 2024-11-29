@@ -6,7 +6,7 @@ import { Icon, SearchIcon } from '../ui/icon';
 const Header = () => {
   return (
     <Box className='flex flex-row gap-4 items-center justify-between h-20 px-10 bg-zinc-900'>
-      <Link href='/' asChild>
+      <Link href='/'>
         <Heading size='2xl'>Movie DB</Heading>
       </Link>
 
