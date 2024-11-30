@@ -12,7 +12,7 @@ export interface CarouselItemProps {
   index: number;
 }
 
-const itemWidth = 288; // px
+const itemWidth = 260; // px
 const spacing = 24; // Spacing between items
 
 export function CarouselItem({ item, index }: CarouselItemProps) {
@@ -26,7 +26,7 @@ export function CarouselItem({ item, index }: CarouselItemProps) {
         <a
           href={item.url}
           style={{ marginRight: spacing, width: itemWidth }}
-          className='relative h-[20rem] rounded-lg overflow-hidden select-none [user-drag:none]'
+          className='relative h-[16rem] rounded-lg overflow-hidden select-none [user-drag:none]'
           draggable='false'
         >
           <Image
@@ -42,7 +42,7 @@ export function CarouselItem({ item, index }: CarouselItemProps) {
         <Pressable
           onPress={onPressHandler}
           style={{ marginRight: spacing, width: itemWidth }}
-          className='relative h-[20rem] rounded-lg overflow-hidden'
+          className='relative h-[16rem] rounded-lg overflow-hidden'
         >
           <Image
             source={item.image}
