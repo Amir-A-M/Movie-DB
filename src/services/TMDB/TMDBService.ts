@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { TMDBMovie, TMDBResponse } from './types';
 
 const api = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
@@ -48,7 +49,7 @@ class TMDBService {
     return this.fetchWithCache(`/discover/movie?with_genres=${genreId}`);
   }
 
-  async getTrending() {
+  async getTrending(): Promise<TMDBResponse<TMDBMovie>> {
     return this.fetchWithCache('/trending/movie/week');
   }
 }
