@@ -6,6 +6,8 @@ import { Href, Link } from 'expo-router';
 import { Heading } from '../../ui/heading';
 import { Button, ButtonIcon, ButtonText } from '../../ui/button';
 import { ArrowRightIcon } from '../../ui/icon';
+import { TMDBMovie, TMDBResponse } from '@/src/services/TMDB/types';
+import { getTMDBImage } from '@/src/services/TMDB/helpers';
 
 type Props = {
   title: string;
@@ -37,6 +39,26 @@ const BasicCarouselWrapper = ({ carouselItems, title, cta }: Props) => {
       </Box>
       <BasicCarousel data={carouselItems} />
     </Box>
+  );
+};
+
+type normalizeCarouselDataType = {
+  data: TMDBResponse<TMDBMovie>;
+};
+
+export const normalizeCarouselData = ({ data }: normalizeCarouselDataType) => {
+  if (!data || !data.results) return [];
+
+  return data.results.map(
+    (movie) =>
+      ({
+        id: movie.id,
+        title: movie.title || movie.name,
+        image: movie.backdrop_path
+          ? getTMDBImage({ size: 'w780', path: movie.backdrop_path })
+          : null,
+        url: `/movie/${movie.id}`,
+      } as BasicCarouselItemType)
   );
 };
 

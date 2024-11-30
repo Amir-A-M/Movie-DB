@@ -3,6 +3,7 @@ import BasicCarouselWrapper from '@/src/components/carousel/basic/BasicCarouselW
 import SingleCarouselWrapper from '@/src/components/carousel/single/SingleCarouselWrapper';
 import Header from '@/src/components/header/Header';
 import Hero from '@/src/components/pages/home/hero';
+import Trending from '@/src/components/pages/home/Trending';
 import { Box } from '@/src/components/ui/box';
 import { exampleMovieList } from '@/src/constants/sampleData';
 import { Href } from 'expo-router';
@@ -16,15 +17,9 @@ export default function Index() {
       <Box className='h-full w-full'>
         <Hero />
 
-        <BasicCarouselWrapper
-          title='Trending'
-          carouselItems={exampleMovieList}
-          cta={{
-            href: './' as Href,
-          }}
-        />
+        <Trending />
 
-        <SingleCarouselWrapper
+        {/* <SingleCarouselWrapper
           title='Trailers'
           carouselItems={exampleMovieList}
         />
@@ -41,7 +36,7 @@ export default function Index() {
         <BasicCarouselWrapper
           title="What's Popular"
           carouselItems={exampleMovieList}
-        />
+        /> */}
       </Box>
     </ScrollView>
   );
