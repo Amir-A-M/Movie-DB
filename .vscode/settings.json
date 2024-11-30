@@ -19,6 +19,7 @@
   "prettier.endOfLine": "lf",
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "cSpell.words": [
+    "TMDB",
     "viewability"
   ] // Ensure consistent line endings (use LF for Linux/Mac/Windows consistency)
 }
