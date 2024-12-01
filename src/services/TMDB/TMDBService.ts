@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { TMDBMovie, TMDBResponse } from './types';
+import { TMDBMovie, TMDBResponse, TMDBYoutubeId } from './types';
 
 const api = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
@@ -53,6 +53,43 @@ class TMDBService {
   async getTrending(): Promise<TMDBResponse<TMDBMovie>> {
     return this.fetchWithCache('/trending/movie/week');
   }
+
+  async getNowPlaying(): Promise<TMDBResponse<TMDBMovie>> {
+    return this.fetchWithCache('/movie/now_playing');
+  }
+
+  async getUpcoming(): Promise<TMDBResponse<TMDBMovie>> {
+    return this.fetchWithCache('/movie/upcoming');
+  }
+
+  async getPopular(): Promise<TMDBResponse<TMDBMovie>> {
+    return this.fetchWithCache('/movie/popular');
+  }
+  async getTrailers({ start = 0, limit = -1 }: { start?: number, limit?: number }): Promise<TMDBYoutubeId[]> {
+    const movieListResponse = await this.fetchWithCache('/movie/upcoming');
+    const movieList = movieListResponse?.results || [];
+
+    console.log(movieListResponse);
+
+    const trailerPromises = movieList.slice(start, limit).map(async (movie: { id: number }) => {
+      const videoResponse = await this.fetchWithCache(`/movie/${movie.id}/videos`);
+      console.log(videoResponse);
+
+      const trailers = videoResponse?.results.filter(
+        (video: { site: string; type: string; key: string; }) =>
+          video.site === 'YouTube' && video.type === 'Trailer' && video.key
+      );
+
+      return {
+        key: trailers.length > 0 ? trailers[0].key : null,
+      };
+    });
+
+    const youtubeIds = (await Promise.all(trailerPromises)).filter((movie) => movie.key !== null);
+
+    return youtubeIds;
+  }
+
 }
 
 export default new TMDBService();

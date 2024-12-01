@@ -32,3 +32,7 @@ export interface TMDBImageOptions {
   path: string; // The image path returned by TMDB
   size: TMDBImageSize; // The desired image size
 }
+
+export interface TMDBYoutubeId {
+  key: string;
+}
