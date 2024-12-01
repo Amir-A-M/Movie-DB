@@ -21,8 +21,8 @@ type Props = {
 const SingleCarouselWrapper = ({ carouselItems, title, cta }: Props) => {
   return (
     <Box className='mb-6'>
-      <Box className='d-flex flex-row justify-between my-6 mx-3 md:mx-6 lg:mx-9'>
-        <Heading size='lg'>{title}</Heading>
+      <Box className='d-flex flex-row justify-center my-6 mx-3 md:mx-6 lg:mx-9'>
+        <Heading size='2xl'>{title}</Heading>
         {cta && (
           <Link href={cta.href} className='me-2'>
             <Button variant='link' className='group'>

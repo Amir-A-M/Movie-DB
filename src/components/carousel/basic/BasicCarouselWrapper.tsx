@@ -24,7 +24,7 @@ const BasicCarouselWrapper = ({ carouselItems, title, cta }: Props) => {
   return (
     <Box className='mb-6'>
       <Box className='d-flex flex-row justify-between mt-6 -mb-3 mx-3 md:mx-6 lg:mx-9'>
-        <Heading size='lg'>{title}</Heading>
+        <Heading size='2xl'>{title}</Heading>
         {cta && (
           <Link href={cta.href} className='me-2'>
             <Button variant='link' className='group'>
