@@ -56,7 +56,7 @@ export const normalizeCarouselData = ({ data }: normalizeCarouselDataType) => {
         title: movie.title || movie.name,
         image: movie.backdrop_path
           ? getTMDBImage({ size: 'w780', path: movie.backdrop_path })
-          : null,
+          : require('@/assets/images/placeholders/empty.png'),
         url: `/movie/${movie.id}`,
       } as BasicCarouselItemType)
   );
