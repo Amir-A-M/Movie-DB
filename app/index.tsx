@@ -1,9 +1,7 @@
-import BasicCarousel from '@/src/components/carousel/basic/BasicCarousel';
-import BasicCarouselWrapper from '@/src/components/carousel/basic/BasicCarouselWrapper';
-import SingleCarouselWrapper from '@/src/components/carousel/single/SingleCarouselWrapper';
 import Header from '@/src/components/header/Header';
 import Hero from '@/src/components/pages/home/hero';
 import Popular from '@/src/components/pages/home/Popular';
+import Trailers from '@/src/components/pages/home/Trailers';
 import Trending from '@/src/components/pages/home/Trending';
 import Upcoming from '@/src/components/pages/home/Upcoming';
 import { Box } from '@/src/components/ui/box';
@@ -18,6 +16,7 @@ export default function Index() {
         <Hero />
 
         <Trending />
+        <Trailers />
         <Popular />
         <Upcoming />
       </Box>

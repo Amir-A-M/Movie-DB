@@ -10,9 +10,7 @@ import Animated, {
 import Pagination from './Pagination';
 
 export type SingleCarouselItemType = {
-  url: string;
-  title: string;
-  image: ImageSourcePropType;
+  key: string | null;
 };
 
 type Props = {
