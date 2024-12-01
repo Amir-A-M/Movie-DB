@@ -9,6 +9,7 @@ const api = axios.create({
   },
   params: {
     language: 'en-US',
+    include_adult: false,
   }
 });
 
