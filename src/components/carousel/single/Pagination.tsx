@@ -1,4 +1,3 @@
-import { BasicCarouselItemType } from '../basic/BasicCarousel';
 import Animated, {
   Extrapolation,
   interpolate,
@@ -7,9 +6,10 @@ import Animated, {
 } from 'react-native-reanimated';
 import { Box } from '../../ui/box';
 import { Dimensions } from 'react-native';
+import { SingleCarouselItemType } from './SingleCarousel';
 
 type Props = {
-  items: BasicCarouselItemType[];
+  items: SingleCarouselItemType[];
   scrollX: SharedValue<number>;
 };
 
