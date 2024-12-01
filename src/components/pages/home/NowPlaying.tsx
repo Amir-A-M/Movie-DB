@@ -8,8 +8,8 @@ import { TMDBService } from '@/src/services/TMDB';
 import { exampleMovieList } from '@/src/constants/sampleData';
 import { Box } from '../../ui/box';
 
-const Trending = () => {
-  const { data, loading, error } = useFetch(() => TMDBService.getTrending());
+const NowPlaying = () => {
+  const { data, loading, error } = useFetch(() => TMDBService.getNowPlaying());
 
   const carouselData = useMemo(() => {
     if (loading || !data) {
@@ -24,14 +24,14 @@ const Trending = () => {
 
   return (
     <BasicCarouselWrapper
-      title='Trending'
+      title='Now Playing'
       carouselItems={carouselData}
       cta={{
-        title: 'Trending Movies',
+        title: 'See all of em',
         href: './' as Href,
       }}
     />
   );
 };
 
-export default Trending;
+export default NowPlaying;
