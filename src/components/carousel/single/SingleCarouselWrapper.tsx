@@ -6,6 +6,7 @@ import { Href, Link } from 'expo-router';
 import { Heading } from '../../ui/heading';
 import { Button, ButtonIcon, ButtonText } from '../../ui/button';
 import { ArrowRightIcon } from '../../ui/icon';
+import { Platform } from 'react-native';
 
 type Props = {
   title: string;
@@ -19,6 +20,10 @@ type Props = {
 };
 
 const SingleCarouselWrapper = ({ carouselItems, title, cta }: Props) => {
+  if (Platform.OS !== 'web' && Platform.OS !== 'ios') {
+    return null;
+  }
+
   return (
     <Box className='mb-6'>
       <Box className='d-flex flex-row justify-center my-6 mx-3 md:mx-6 lg:mx-9'>
