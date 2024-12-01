@@ -19,10 +19,6 @@ type Props = {
   data: SingleCarouselItemType[];
 };
 
-LogBox.ignoreLogs([
-  'Warning: findDOMNode is deprecated and will be removed in the next major release.',
-]);
-
 const SingleCarousel = ({ data }: Props) => {
   const scrollX = useSharedValue(0);
 

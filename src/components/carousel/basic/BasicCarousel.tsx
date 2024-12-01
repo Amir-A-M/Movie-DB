@@ -3,7 +3,6 @@ import { CarouselItem } from './Item';
 import { Box } from '../../ui/box';
 
 import { DraggableFlatList } from '../../common/DraggableFlatList';
-import { LogBox } from '@/src/utils/logBox';
 
 export type BasicCarouselItemType = {
   url: string;
@@ -14,10 +13,6 @@ export type BasicCarouselItemType = {
 type Props = {
   data: BasicCarouselItemType[];
 };
-
-LogBox.ignoreLogs([
-  'Warning: findDOMNode is deprecated and will be removed in the next major release.',
-]);
 
 const BasicCarousel = ({ data }: Props) => {
   return (
