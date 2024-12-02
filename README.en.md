@@ -1,6 +1,10 @@
 # Movie DB App 🎬
 
 [این را به فارسی بخوانید](./README.md)
+to start the project in local
+```bash
+npm run start
+```
 
 A React Native application for browsing movies and TV shows. This project uses The Movie Database API to fetch real-time data.
 
