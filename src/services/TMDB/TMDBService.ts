@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { TMDBMovie, TMDBResponse, TMDBYoutubeId } from './types';
+import { UnknownOutputParams } from 'expo-router';
 
 const api = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
@@ -34,6 +35,16 @@ class TMDBService {
   }
 
   // API methods
+  async DiscoverMovies(searchParams: UnknownOutputParams) {
+    let search = '?';
+
+    Object.entries(searchParams).forEach(
+      ([key, value]) => search += `${key}=${value},`
+    );
+
+    return this.fetchWithCache('/movie/popular' + search);
+  }
+
   async getPopularMovies() {
     return this.fetchWithCache('/movie/popular');
   }
