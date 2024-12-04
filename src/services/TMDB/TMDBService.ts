@@ -69,11 +69,8 @@ class TMDBService {
     const movieListResponse = await this.fetchWithCache('/movie/upcoming');
     const movieList = movieListResponse?.results || [];
 
-    console.log(movieListResponse);
-
     const trailerPromises = movieList.slice(start, limit).map(async (movie: { id: number }) => {
       const videoResponse = await this.fetchWithCache(`/movie/${movie.id}/videos`);
-      console.log(videoResponse);
 
       const trailers = videoResponse?.results.filter(
         (video: { site: string; type: string; key: string; }) =>
