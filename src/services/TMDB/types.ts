@@ -36,3 +36,8 @@ export interface TMDBImageOptions {
 export interface TMDBYoutubeId {
   key: string;
 }
+
+export interface TMDBGenre {
+  name: string;
+  id: number
+}
