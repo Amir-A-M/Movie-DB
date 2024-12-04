@@ -1,11 +1,16 @@
 import { ImageSourcePropType } from 'react-native';
 import { Box } from '../../ui/box';
 import Item from './Item';
+import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 
 export type BasicListItemType = {
   url: string;
   title: string;
+  overview: string;
   image: ImageSourcePropType;
+  vote_average: Float;
+
+  release_date: string;
 };
 
 type Props = {
