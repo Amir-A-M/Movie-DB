@@ -23,13 +23,13 @@ const Genres = () => {
       </Heading>
 
       <Box className='mt-5 mb-3 flex flex-row flex-wrap justify-center gap-3'>
-        {data.genres.map((genre: TMDBGenre) => (
+        {data.genres.map(({ name, id }: TMDBGenre) => (
           <Link
-            href={'list'}
-            key={genre.id}
+            href={`search/results/?with_genres=${id}&sort_by=popularity.desc&title=${name}`}
+            key={id}
             className='border border-zinc-700 px-3 rounded-lg transition-all hover:bg-zinc-800 hover:scale-105'
           >
-            <Text>{genre.name}</Text>
+            <Text>{name}</Text>
           </Link>
         ))}
       </Box>
