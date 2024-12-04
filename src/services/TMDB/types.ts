@@ -1,13 +1,17 @@
+import { Float } from "react-native/Libraries/Types/CodegenTypes";
+
 // TMDB API Common Movie/Show Item
 export interface TMDBMovie {
   id: number;
   title?: string; // For movies
   name?: string; // For TV shows
-  backdrop_path?: string;
-  overview?: string;
-  release_date?: string; // For movies
+  backdrop_path?: string; // image
+  overview?: string; // description
   first_air_date?: string; // For TV shows
   media_type?: string; // 'movie' or 'tv'
+  vote_average?: Float; // 8.2
+
+  release_date?: string; // "2024-10-22"
 }
 
 // TMDB API Response
