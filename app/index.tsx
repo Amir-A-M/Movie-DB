@@ -1,4 +1,5 @@
 import Header from '@/src/components/header/Header';
+import Genres from '@/src/components/pages/home/Genres';
 import Hero from '@/src/components/pages/home/hero';
 import Popular from '@/src/components/pages/home/Popular';
 import Trailers from '@/src/components/pages/home/Trailers';
@@ -17,6 +18,7 @@ export default function Index() {
 
         <Trending />
         <Trailers />
+        <Genres />
         <Popular />
         <Upcoming />
       </Box>
