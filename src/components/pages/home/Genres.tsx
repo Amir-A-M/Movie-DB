@@ -17,12 +17,12 @@ const Genres = () => {
   if (!data) return;
 
   return (
-    <Box className='sm:m-3 md:m-6 lg:m-9'>
+    <Box className='sm:m-3 md:m-6 lg:m-9 flex items-center'>
       <Heading size='2xl' className='text-center'>
         Genres
       </Heading>
 
-      <Box className='mt-5 mb-3 flex flex-row flex-wrap justify-center gap-3'>
+      <Box className='mt-5 mb-3 flex flex-row flex-wrap justify-center gap-3 max-w-[800px]'>
         {data.genres.map(({ name, id }: TMDBGenre) => (
           <Link
             href={`search/results/?with_genres=${id}&sort_by=popularity.desc&title=${name}`}
