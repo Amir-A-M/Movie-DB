@@ -39,8 +39,11 @@ class TMDBService {
     let search = '?';
 
     Object.entries(searchParams).forEach(
-      ([key, value]) => search += `${key}=${value},`
+      ([key, value]) => search += `${key}=${value}&`
     );
+
+    return this.fetchWithCache('/discover/movie' + search.slice(0, -1));
+  }
 
   async SearchMovies(searchParams: UnknownOutputParams) {
     let search = '?';
