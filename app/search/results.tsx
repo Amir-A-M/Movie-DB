@@ -18,11 +18,14 @@ export default function ResultScreen() {
   const [totalPages, setTotalPage] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
 
-  const { title = 'Results', ...search } = useLocalSearchParams();
+  const { title = 'Results', isSearch, ...search } = useLocalSearchParams();
   const searchParams = { page: page.toString(), ...search };
 
   const { data, loading, error } = useFetch(
-    () => TMDBService.DiscoverMovies(searchParams),
+    () =>
+      isSearch
+        ? TMDBService.SearchMovies(searchParams)
+        : TMDBService.DiscoverMovies(searchParams),
     [page]
   );
 
@@ -40,7 +43,7 @@ export default function ResultScreen() {
     return <Box>Error</Box>;
   }
 
-  if (listData.length === 0) {
+  if (!loading && listData.length === 0) {
     return <Box>Ahh. No results found :(</Box>;
   }
 

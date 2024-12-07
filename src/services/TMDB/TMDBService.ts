@@ -42,7 +42,14 @@ class TMDBService {
       ([key, value]) => search += `${key}=${value},`
     );
 
-    return this.fetchWithCache('/movie/popular' + search);
+  async SearchMovies(searchParams: UnknownOutputParams) {
+    let search = '?';
+
+    Object.entries(searchParams).forEach(
+      ([key, value]) => search += `${key}=${value}&`
+    );
+
+    return this.fetchWithCache('/search/movie' + search.slice(0, -1));
   }
 
   async getPopularMovies() {
