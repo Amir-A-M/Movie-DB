@@ -7,7 +7,7 @@ import { Heading } from '../../ui/heading';
 import { Button, ButtonIcon, ButtonText } from '../../ui/button';
 import { ArrowRightIcon } from '../../ui/icon';
 import { TMDBMovie, TMDBResponse } from '@/src/services/TMDB/types';
-import { getTMDBImage } from '@/src/services/TMDB/helpers';
+import { getImageOrPlaceholder } from '@/src/services/TMDB/helpers';
 
 type Props = {
   title: string;
@@ -54,9 +54,10 @@ export const normalizeCarouselData = ({ data }: normalizeCarouselDataType) => {
       ({
         id: movie.id,
         title: movie.title || movie.name,
-        image: movie.backdrop_path
-          ? getTMDBImage({ size: 'w780', path: movie.backdrop_path })
-          : require('@/assets/images/placeholders/empty.png'),
+        image: getImageOrPlaceholder({
+          size: 'w780',
+          path: movie.backdrop_path,
+        }),
         url: `/movie/${movie.id}`,
       } as BasicCarouselItemType)
   );
