@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { TMDBMovie, TMDBResponse, TMDBYoutubeId } from './types';
+import { TMDBMovie, TMDBMovieDetail, TMDBResponse, TMDBYoutubeId } from './types';
 import { UnknownOutputParams } from 'expo-router';
 
 const api = axios.create({
@@ -8,25 +8,28 @@ const api = axios.create({
     accept: 'application/json',
     Authorization: `Bearer ${process.env.EXPO_PUBLIC_TMDB_AUTH_TOKEN}`, // Remember this is not safe! 
   },
-  params: {
-    language: 'en-US',
-    include_adult: false,
-  }
 });
+
+const default_api_params = {
+  language: 'en-US',
+  include_adult: false,
+};
 
 const cache = new Map<string, { data: any; }>();
 
 
 class TMDBService {
   // Helper to fetch data with caching
-  async fetchWithCache(endpoint: string) {
+  async fetchWithCache<T>(endpoint: string, params = {}) {
 
     if (cache.has(endpoint)) {
       const { data } = cache.get(endpoint)!;
       return data;
     }
 
-    const response = await api.get(endpoint);
+    const response = await api.get(endpoint, {
+      params: Object.assign({}, default_api_params, params)
+    });
     const responseData = response.data;
 
     cache.set(endpoint, { data: responseData });
@@ -64,7 +67,11 @@ class TMDBService {
   }
 
   async getMovieDetails(movieId: number) {
-    return this.fetchWithCache(`/movie/${movieId}`);
+    return this.fetchWithCache<TMDBMovieDetail>(`/movie/${movieId}`);
+  }
+
+  async getMovieImages(movieId: number) {
+    return this.fetchWithCache(`/movie/${movieId}/images`, { language: null });
   }
 
   async getMoviesByGenre(genreId: number) {
