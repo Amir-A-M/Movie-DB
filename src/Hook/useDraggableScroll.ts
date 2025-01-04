@@ -1,7 +1,7 @@
 import { useEffect, useRef, useMemo, ForwardedRef } from 'react'
+import { mergeRefs } from 'react-merge-refs-ahhh-test'
 import { Platform, findNodeHandle } from 'react-native'
 import type { FlatList } from 'react-native'
-import { mergeRefs } from 'react-merge-refs'
 
 type Props<Scrollable extends FlatList = FlatList> = {
   cursor?: string
