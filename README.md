@@ -1,162 +1,161 @@
-# برنامه Movie DB 🎬
+# Movie DB App 🎬
 
-[Read This In En](./README.en.md)
+[این را به فارسی بخوانید](./README.fa.md)
+to start the project in local
 
-برای اجرای پروژه روی لوکال
 ```bash
 npm run start
 ```
 
-یک اپلیکیشن React Native برای مرور فیلم‌ها و سریال‌ها. این پروژه از API پایگاه داده فیلم برای دریافت اطلاعات به‌روز استفاده می‌کند.
+A React Native application for browsing movies and TV shows. This project uses The Movie Database API to fetch real-time data.
 
-## 📱 امکانات
+## 📱 Features
 
-- مرور فیلم‌ها و سریال‌ها
-- فیلتر بر اساس ژانر، محبوبیت و امتیاز
-- مشاهده اطلاعات کامل هر عنوان
+- Browse movies and TV shows
+- Filter by genre, popularity, and rating
+- View detailed information about each title
 
-## 🛠 تکنولوژی‌های استفاده شده
+## 🛠 Tech Stack
 
-- [Node.js](https://nodejs.org/) - پلتفرم اجرای جاوااسکریپت
-- [React Native](https://reactnative.dev/) - فریم‌ورک توسعه موبایل
-- [Expo](https://expo.dev/) - پلتفرم توسعه
-- [NativeWind](https://www.nativewind.dev/) - کتابخانه استایل‌دهی
+- [Node.js](https://nodejs.org/) - JavaScript runtime
+- [React Native](https://reactnative.dev/) - Mobile app framework
+- [Expo](https://expo.dev/) - Development platform
+- [NativeWind](https://www.nativewind.dev/) - Utility-first styling
 
-## 📚 ساختار پروژه
+## 📚 Project Structure
 
 ```
 Movie-DB/
 ├── assets/
 ├── src/
 │   ├── components/
-│   │   ├── ui/          # کامپوننت‌های Glustack UI
-│   │   └── example.jsx  # نمونه کامپوننت‌ها
+│   │   ├── ui/          # Glustack UI components
+│   │   └── example.jsx  # Component examples
 │   └── styles/
-│       └── global.css   # استایل‌های سراسری (Tailwind)
+│       └── global.css   # Global styles (Tailwind)
 ```
 
-## 🚀 شروع به کار
+## 🚀 Getting Started
 
-برای راهنمای نصب و مشارکت در پروژه، [راهنمای مشارکت](./CONTRIBUTING.md) را مطالعه کنید.
+See our [Contributing Guide](./CONTRIBUTING.md) for detailed setup instructions and how to contribute.
 
 ---
 
+# Contributing to Movie DB 🎬
 
-# راهنمای مشارکت در Movie DB 🎬
+This guide will help you set up the project locally and make your first contribution. Don't worry if you're new to this - we'll walk through each step!
 
-این راهنما به شما کمک می‌کند تا پروژه را روی سیستم خود راه‌اندازی کنید و اولین مشارکت خود را انجام دهید. نگران نباشید اگر تازه‌کار هستید - ما هر مرحله را با هم پیش می‌رویم!
+## 💻 Prerequisites
 
-## 💻 پیش‌نیازها
-
-1. ساخت [حساب کاربری GitHub](https://github.com/signup)
-2. نصب ابزارهای مورد نیاز:
-   - [Node.js](https://nodejs.org/) (نسخه 20.10.0 پیشنهاد می‌شود)
+1. Create a [GitHub Account](https://github.com/signup)
+2. Install required tools:
+   - [Node.js](https://nodejs.org/) (v20.10.0 recommended)
    - [Git](https://git-scm.com/downloads)
    - [Visual Studio Code](https://code.visualstudio.com/)
 
-## 🔧 مراحل راه‌اندازی
+## 🔧 Setup Steps
 
-### 1. نصب Node.js
+### 1. Install Node.js
 
-1. به [وب‌سایت Node.js](https://nodejs.org/) بروید
-2. نسخه 20.10.0 را دانلود کنید
-3. نصب‌کننده را اجرا کنید
-4. نصب را تایید کنید:
+1. Go to [Node.js website](https://nodejs.org/)
+2. Download version 20.10.0
+3. Run the installer
+4. Verify installation:
 
 ```bash
 node --version
 npm --version
 ```
 
-### 2. نصب Git
+### 2. Install Git
 
-1. به [وب‌سایت Git](https://git-scm.com/downloads) بروید
-2. دانلود و نصب کنید
-3. نصب را تایید کنید:
+1. Go to [Git website](https://git-scm.com/downloads)
+2. Download and run the installer
+3. Verify installation:
 
 ```bash
 git --version
 ```
 
-### 3. راه‌اندازی VS Code
+### 3. Setup VS Code
 
-1. [Visual Studio Code](https://code.visualstudio.com/) را نصب کنید
-2. افزونه پیشنهادی را نصب کنید:
+1. Install [Visual Studio Code](https://code.visualstudio.com/)
+2. Install recommended extension:
    - Prettier - Code formatter
 
-### 4. دریافت و راه‌اندازی پروژه
+### 4. Clone & Setup Project
 
-1. ترمینال را باز کنید (در ویندوز: Command Prompt)
-2. مخزن را کلون کنید:
+1. Open terminal (Command Prompt on Windows) in a folder you keep your projects in
+2. Clone the repository:
 
 ```bash
 git clone https://github.com/Amir-A-M/Movie-DB.git
 cd Movie-DB
 ```
 
-3. وابستگی‌ها را نصب کنید:
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-### پوشه Movie-DB در vsCode باز کنید
+### Open the Movie-DB folder in vsCode
 
-مطمئن شوید که این دکمه رو بزنید
+make sure to hit this button
 ![Manage Unsafe Repos](./readme_files/Manage%20Unsafe%20Repos.png)
 
-و بعد میتوانید `CTRL + \`` برای باز کردن ترمینال vscode استفاده کنید
+after that use `CTRL + \`` to open terminal in vscode
 
-## 🌿 ایجاد تغییرات
+## 🌿 Making Changes
 
-### 1. ایجاد شاخه جدید
+### 1. Create a New Branch
 
 ```bash
-# به جای 'username' نام خود و به جای 'feature-name' نام ویژگی را قرار دهید
+# Replace 'username' with your name and 'feature-name' with what you're working on
 git checkout -b feature/username/feature-name
 ```
 
-مثال:
+Example:
 
 ```bash
-git checkout -b feature/ali/add-search-button
+git checkout -b feature/alex/add-search-button
 ```
 
-### 2. اعمال تغییرات
+### 2. Make Your Changes
 
-1. پروژه را در VS Code باز کنید
-2. تغییرات خود را اعمال کنید
-3. همه فایل‌ها را ذخیره کنید
+1. Open the project in VS Code
+2. Make your changes
+3. Save all files
 
-### 3. ثبت تغییرات
+### 3. Commit Your Changes
 
 ```bash
-# افزودن تغییرات
+# Add your changes
 git add .
 
-# ثبت با پیام توضیحی
-git commit -m "اضافه کردن دکمه جستجو به صفحه اصلی"  # همچنین میتونید از رابط گرافیکی vscode استفاده کنید
+# Commit with a descriptive message
+git commit -m "Add search button to home screen" # you can also use vscode GUI
 
-# ارسال شاخه
+# Push your branch
 git push origin feature/username/feature-name
 ```
 
-### 4. ایجاد Pull Request
+### 4. Create a Pull Request
 
-1. به [مخزن پروژه](https://github.com/Amir-A-M/Movie-DB.git) بروید
-2. روی 'Pull requests' کلیک کنید
-3. روی 'New Pull Request' کلیک کنید
-4. شاخه خود را انتخاب کنید
-5. روی 'Create pull request' کلیک کنید
-6. توضیحات تغییرات را اضافه کنید
-7. ارسال کنید!
+1. Go to [project repository](https://github.com/Amir-A-M/Movie-DB.git)
+2. Click 'Pull requests'
+3. Click 'New Pull Request'
+4. Select your branch
+5. Click 'Create pull request'
+6. Add description of your changes
+7. Submit!
 
-## ❓ نیاز به کمک دارید؟
+## ❓ Need Help?
 
-- اگر در جایی گیر کردید، از هم‌تیمی‌ها یا نگهدارندگان پروژه کمک بگیرید
-- مستندات ابزارهای مورد استفاده را بررسی کنید:
-  - [مستندات React Native](https://reactnative.dev/docs/getting-started)
-  - [مستندات Expo](https://docs.expo.dev/)
-  - [مستندات NativeWind](https://www.nativewind.dev/overview/)
+- If you're stuck, ask your teammates or project maintainers
+- Check the documentation of tools we use:
+  - [React Native Docs](https://reactnative.dev/docs/getting-started)
+  - [Expo Docs](https://docs.expo.dev/)
+  - [NativeWind Docs](https://www.nativewind.dev/overview/)
 
-موفق باشید! 🚀
+Happy coding! 🚀

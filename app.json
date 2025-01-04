@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "movie-db",
+    "name": "Movie DB",
     "slug": "movie-db",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,7 +15,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.amiram.moviedb",
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "17d6c9a4-e66e-4acb-96b6-cd5a397e15db"
+      }
     }
   }
 }

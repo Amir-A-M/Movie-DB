@@ -7,7 +7,8 @@ const { wrapWithReanimatedMetroConfig } = require('react-native-reanimated/metro
 const config = getDefaultConfig(__dirname);
 
 // Use NativeWind with custom Tailwind configuration
-module.exports = wrapWithReanimatedMetroConfig(
+module.exports = 
+wrapWithReanimatedMetroConfig(
   withNativeWind(config, {
     input: './src/styles/global.css',
   })
