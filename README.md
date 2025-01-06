@@ -106,6 +106,12 @@ make sure to hit this button
 
 after that use `CTRL + \`` to open terminal in vscode
 
+### api key and running on web 
+create this file in your project root and copy your TMDB api key
+```env
+# .env.local
+EXPO_PUBLIC_TMDB_AUTH_TOKEN= <TMDB Api key>
+```
 and to run web
 ```bash
 npm run web
