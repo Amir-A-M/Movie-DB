@@ -58,7 +58,7 @@ This guide will help you set up the project locally and make your first contribu
 ### 1. Install Node.js
 
 1. Go to [Node.js website](https://nodejs.org/)
-2. Download version 20.10.0
+2. Download version 20.17.0
 3. Run the installer
 4. Verify installation:
 
@@ -105,6 +105,11 @@ make sure to hit this button
 ![Manage Unsafe Repos](./readme_files/Manage%20Unsafe%20Repos.png)
 
 after that use `CTRL + \`` to open terminal in vscode
+
+and to run web
+```bash
+npm run web
+```
 
 ## 🌿 Making Changes
 
